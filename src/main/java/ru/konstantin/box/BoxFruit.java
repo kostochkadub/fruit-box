@@ -4,6 +4,7 @@ import ru.konstantin.fruit.Fruit;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class BoxFruit<T extends Fruit> {
 
@@ -26,16 +27,16 @@ public class BoxFruit<T extends Fruit> {
         return boxFruit.getWeight() == this.getWeight();
     }
 
-    public ArrayList<T> getFruitStack() {
+    public List<T> getFruitStack() {
         return fruitStack;
     }
 
-    public ArrayList<T> addFruit(T... fruitStack) {
+    public List<T> addFruit(T... fruitStack) {
         this.fruitStack.addAll(Arrays.asList(fruitStack));
         return this.fruitStack;
     }
 
-    public ArrayList<T> scatterFruits(BoxFruit<T> boxFruit) {
+    public List<T> scatterFruits(BoxFruit<T> boxFruit) {
         boxFruit.fruitStack.addAll(this.fruitStack);
         this.fruitStack.clear();
         return boxFruit.fruitStack;

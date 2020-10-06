@@ -28,6 +28,8 @@ public class SandBox {
         BoxFruit<Orange> boxFruitOrange2 = new BoxFruit<Orange>(orangeThree);
         boxFruitOrange2.addFruit(orangeFour);
 
+        System.out.println("Вес коробки до пересыпания = " + boxFruitOrange2.getWeight());
+
         boxFruitOrange.scatterFruits(boxFruitOrange2);
 
         System.out.println("Вес пересыпанной коробки = " + boxFruitOrange2.getWeight());

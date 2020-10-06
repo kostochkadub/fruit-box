@@ -7,6 +7,7 @@ import ru.konstantin.fruit.Apple;
 import ru.konstantin.fruit.Orange;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 class BoxFruitTest {
@@ -77,7 +78,7 @@ class BoxFruitTest {
         BoxFruit<Apple> boxFruitApples3 = new BoxFruit<Apple>(apple2);
         BoxFruit<Apple> boxFruitApples2 = new BoxFruit<Apple>();
 
-        ArrayList<Apple> list = boxFruitApples1.scatterFruits(boxFruitApples2);
+        List<Apple> list = boxFruitApples1.scatterFruits(boxFruitApples2);
 
         Assertions.assertEquals(true, list.contains(apple));
         Assertions.assertEquals(false, list.contains(apple2));
